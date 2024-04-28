@@ -1,0 +1,1 @@
+# quando f'(pk)=0 durante a iteração do método de Newton-Raphson, é aconselhável interromper a aplicação desse método e recorrer a métodos alternativos para encontrar a raiz da função.
