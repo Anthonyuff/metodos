@@ -1,7 +1,7 @@
 import numpy as np
 
 def f(x):
-    return x * np.cos(x / (x - 2))
+    return x**2 -2*x-1
 
 def bisseccao(a, b, tol, max_iter):
     fa = f(a)
@@ -56,10 +56,10 @@ def falsa_posicao(a, b, tol, max_iter):
     return None
 
 # Intervalo [a, b] e tolerância
-a = 1
-b = 1.5
-tol = 1e-12
-max_iter = 500
+a = 2
+b = 3
+tol = 1e-5
+max_iter = 10
 
 # Calculando a raiz usando o método da bissecção
 raiz_bisseccao = bisseccao(a, b, tol, max_iter)
