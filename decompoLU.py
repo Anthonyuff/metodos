@@ -26,19 +26,22 @@ def X(U,y):
         x[i] = (y[i] - U[i, i+1:] @ x[i+1:]) / U[i, i]
     return x 
 
-#A=np.array([[5,2,1],[3,1,4],[1,1,3]])
-A=np.array([[1,2,3],[4,5,6],[7,8,9]])
+A=np.array([[5,2,1],[3,1,4],[1,1,3]])
+#A=np.array([[1,2,3],[4,5,6],[7,8,9]])
 
 L,U=decompoLU(A)
 
-#b=np.array([[0,-7,5]])
+b1=np.array([1,2,3])
 
-b=np.array([2,-1,1])
+b2=np.array([2,-1,1])
 
-B=b.T
+B1=b1.T
+B2=b2.T
+y1=Y(L,B1)
+y2=Y(L,B2)
 
-y=Y(L,B)
+x1=X(U,y1)
+x2=X(U,y2)
 
-x=X(U,y)
-
-print(x)
+print(f'quando b={b1} é {x1}')
+print(f'quando b={b2} é {x2}')
