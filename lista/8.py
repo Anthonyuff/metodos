@@ -1,11 +1,17 @@
 import numpy as np
 
+# def func(x):
+#     f=1/(7-2*x)
+#     return f
+# def AREA(x):
+#     fi=0.5*np.log(7-2*x)
+#     return fi
 def func(x):
-    f=1/(7-2*x)
-    return f
+     f=1/(14-4*x)
+     return f
 def AREA(x):
-    fi=0.5*np.log(7-2*x)
-    return fi
+     fi=-0.25*np.log(14-4*x)
+     return fi
 A1=AREA(1)
 A2=AREA(3)
 A=A2-A1
